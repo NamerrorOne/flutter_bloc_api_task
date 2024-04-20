@@ -22,9 +22,13 @@ class ImagesLoadingState extends GalleryImagesBaseState {
 class ImagesDeletedState extends GalleryImagesBaseState {
   ImagesDeletedState({required this.images});
   final List<String> images;
+  @override
+  List get props => [images];
 }
 
 class GalleryErrorState extends GalleryImagesBaseState {
   GalleryErrorState({required this.errorMessage});
   final String errorMessage;
+  @override
+  List get props => [errorMessage];
 }
